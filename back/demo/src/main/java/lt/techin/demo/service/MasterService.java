@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.Optional;
 
 @Service
 public class MasterService {
@@ -19,5 +20,9 @@ public class MasterService {
 
     public Collection<Master> findAllMaster() {
         return masterRepository.findAll();
+    }
+
+    public Optional<Master> findMasterById(long id) {
+        return masterRepository.findById(id);
     }
 }

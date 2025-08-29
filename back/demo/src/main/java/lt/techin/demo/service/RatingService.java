@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.Optional;
 
 @Service
 public class RatingService {
@@ -19,5 +20,9 @@ public class RatingService {
 
     public Collection<Rating> findAllRatings() {
         return ratingRepository.findAll();
+    }
+
+    public Optional<Rating> findRatingById(long id) {
+        return ratingRepository.findById(id);
     }
 }

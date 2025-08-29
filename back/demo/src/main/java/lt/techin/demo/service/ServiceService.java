@@ -3,9 +3,11 @@ package lt.techin.demo.service;
 import lt.techin.demo.model.Services;
 import lt.techin.demo.repository.ServiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.Optional;
 
 @Service
 public class ServiceService {
@@ -15,6 +17,10 @@ public class ServiceService {
     @Autowired
     public ServiceService(ServiceRepository serviceRepository) {
         this.serviceRepository = serviceRepository;
+    }
+
+    public static Optional<Services> findServiceById(long id) {
+        return serviceRepository.findById(id);
     }
 
     public Collection<Services> findAllService() {
