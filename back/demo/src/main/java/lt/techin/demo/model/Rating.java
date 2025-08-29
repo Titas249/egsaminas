@@ -11,7 +11,7 @@ public class Rating {
 
     private long rate;
 
-    public Rating(long rate) {
+    public Rating() {
         this.rate = rate;
     }
 

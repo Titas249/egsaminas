@@ -18,6 +18,10 @@ public class Service {
         this.address = address;
     }
 
+    public Service() {
+
+    }
+
     public long getId() {
         return id;
     }
