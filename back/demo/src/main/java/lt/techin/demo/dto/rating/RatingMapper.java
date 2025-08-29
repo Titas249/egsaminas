@@ -1,10 +1,6 @@
 package lt.techin.demo.dto.rating;
 
-import lt.techin.demo.dto.service.ServiceRequestDTO;
-import lt.techin.demo.dto.service.ServiceResponseDTO;
-import lt.techin.demo.dto.service.UpdateServiceResponseDTO;
 import lt.techin.demo.model.Rating;
-import lt.techin.demo.model.Service;
 
 public class RatingMapper {
 

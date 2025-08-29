@@ -1,16 +1,15 @@
 package lt.techin.demo.dto.service;
 
-import lt.techin.demo.model.Service;
-import lt.techin.demo.model.User;
+import lt.techin.demo.model.Services;
 
 public class ServiceMapper {
 
-    public static ServiceResponseDTO toServiceResponseDTO(Service service) {
+    public static ServiceResponseDTO toServiceResponseDTO(Services service) {
         return new ServiceResponseDTO(service.getId(), service.getServiceName(), service.getAddress());
     }
 
-    public static Service toServiceRequestDTO(ServiceRequestDTO serviceRequestDTO) {
-        Service service = new Service();
+    public static Services toServiceRequestDTO(ServiceRequestDTO serviceRequestDTO) {
+        Services service = new Services();
         service.setServiceName(serviceRequestDTO.serviceName());
         service.setAddress(serviceRequestDTO.address());
 
@@ -18,7 +17,7 @@ public class ServiceMapper {
         return service;
     }
 
-    public static UpdateServiceResponseDTO toUpdateServiceResponseDTO(Service service) {
+    public static UpdateServiceResponseDTO toUpdateServiceResponseDTO(Services service) {
         return new UpdateServiceResponseDTO(
                 service.getServiceName(),
                 service.getAddress()

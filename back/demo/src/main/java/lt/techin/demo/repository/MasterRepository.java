@@ -1,4 +1,7 @@
 package lt.techin.demo.repository;
 
-public interface MasterRepository {
+import lt.techin.demo.model.Master;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface MasterRepository extends JpaRepository<Master, Long> {
 }

@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "services")
-public class Service {
+public class Services {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -13,12 +13,12 @@ public class Service {
     private String serviceName;
     private String address;
 
-    public Service(String serviceName, String address) {
+    public Services(String serviceName, String address) {
         this.serviceName = serviceName;
         this.address = address;
     }
 
-    public Service() {
+    public Services() {
 
     }
 

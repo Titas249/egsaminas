@@ -67,8 +67,4 @@ public class User {
 //    public Collection<? extends GrantedAuthority> getAuthorities() {
 //        return roles;
 //    }
-//
-//    public void setId(long id) {
-//        this.id = id;
-//    }
 }
